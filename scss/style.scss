@@ -1,7 +1,26 @@
-$color-background: teal;
-
-@import "partials/toc";
-
-body {
-    background: $color-background;
+/* GLOBAL RESETS */
+* {
+    box-sizing: border-box;
 }
+
+// VARIABLES
+$color-text-body: rgba(0, 0, 0, .8);
+$color-text-headings: rgba(0, 0, 0, 1);
+$color-accent: rgba(84, 148, 157, 1);
+$color-light-accent: rgba(119, 181, 190, 1);
+$color-dark-accent: rgba(71, 108, 114, 1);
+
+$font-family-sans: 'Reem Kufi', sans-serif;
+$font-family-serif: 'Yeseva One', serif;
+
+// BREAKPOINTS
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+// IMPORTS
+@import "partials/toc";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/media";
+@import "partials/layout";
