@@ -11,6 +11,12 @@ TABLE OF CONTENTS
 # GLOBAL RESETS
 # BASE TYPOGRAPHY
 # BUTTONS
+# MEDIA
+    # RESPONSIVE IMAGES
+# LAYOUT
+    # CONTAINER
+    # MEDIA QUERIES
+    # SYMANTIC GRID SYSTEM
 
 */
 /* BASE COLORS */
@@ -43,7 +49,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0 0 0.5em 0;
 }
 
@@ -125,6 +132,7 @@ body {
 /* CONTAINER */
 .container {
   margin: 0 auto;
+  padding: 0 1em;
   max-width: 1000px;
 }
 
@@ -143,4 +151,92 @@ body {
   body {
     font-size: 112.5%;
   }
+}
+/* SYMANTIC GRID */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -2%;
+  margin-right: -2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.row > * {
+  margin: 2%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.row.centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.row.swap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.row.stack {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.row.align-top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .row {
+    /* GRID HELPERS */
+  }
+  .row > * {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .row .one-whole {
+    width: 96%;
+  }
+  .row .one-half {
+    width: 46%;
+  }
+  .row .one-third {
+    width: 29.3333%;
+  }
+  .row .two-thirds {
+    width: 62.6666%;
+  }
+  .row .one-fourth {
+    width: 21%;
+  }
+  .row .three-fourth {
+    width: 71%;
+  }
+  .row .push-one-fourth {
+    margin-left: 27%;
+  }
+  .row .push-one-third {
+    margin-left: 35.333%;
+  }
+  .row .push-one-half {
+    margin-left: 52%;
+  }
+  .row .centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* FOR DEMO PURPOSES */
+.demo .row > * {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1%;
 }
