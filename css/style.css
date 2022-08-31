@@ -17,6 +17,13 @@ TABLE OF CONTENTS
     # CONTAINER
     # MEDIA QUERIES
     # SYMANTIC GRID SYSTEM
+# STRUCTURE
+    # SITE HEADER
+    # SITE NAV
+    # MAIN
+        # SECTIONS
+    # SITE FOOTER
+
 
 */
 /* BASE COLORS */
@@ -239,4 +246,88 @@ body {
 .demo .row > * {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 1%;
+}
+
+/* SITE STRUCTURE */
+.site-header {
+  background: rgb(71, 108, 114);
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+.site-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* SITE FOOTER */
+.site-footer {
+  background: rgb(71, 108, 114);
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.site-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* SITE NAV */
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.site-nav a {
+  display: inline-block;
+  padding: 0 1em;
+  line-height: 1;
+}
+
+/* SECTION */
+section {
+  padding: 4em 0;
+}
+
+/* SECTION HEADING */
+.section-heading {
+  font-size: 1rem;
+  font-family: "Reem Kufi", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid rgb(84, 148, 157);
+  display: table;
+  padding: 0 0 0.5em 0;
+  margin: 1em auto 3em auto;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 6em 0;
+  background: rgb(119, 181, 190);
+  text-align: center;
+}
+.hero h1 {
+  margin-bottom: 0.25em;
+}
+.hero p {
+  margin: 1em auto;
 }
